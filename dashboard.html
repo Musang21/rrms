@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>the/clickers</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+</head>
+<body>
+    <nav class="navigation-position">
+        <div class="navigation-container" id="navigation">
+            
+            <div class="navigation-head">
+                <img src="riskreduction.png" alt="logo" class="clickers-logo">
+                
+                <div class="button-head">
+                    <a href=""><button class="button-report">Report</button></a>
+                    <a href="dashboard.html"><button class="button-dashboard">Dashboard</button></a>
+                </div>
+                
+                   <div onclick="baranimation(this)">
+                     <div class="span-bar" onclick="openmenu()">
+                       <div class="bar-right"></div>
+                       <div class="bar-short"></div>
+                       <div class="bar-left"></div>
+                     </div>
+                   </div>
+            </div>
+            
+            <ul>
+                <p class="text-head">Explore</p>
+              <li><a href="map.html"><i class="ri-map-pin-2-line icon-menu"></i>Map</a></li>
+              <li><a href="weather.html"><i class="ri-thunderstorms-line icon-menu"></i>Weather update</a></li>
+              <li><a href=""><i class="ri-rainy-line icon-menu"></i>Rain Drop</a></li>
+              <li><a href=""><i class="ri-road-map-line icon-menu"></i>Route</a></li>
+                <p class="text-head">USER MANAGEMENT</p>
+              <li><a href=""><i class="ri-group-line icon-menu"></i>Create Account</a></li> 
+              <li><a href=""><i class="ri-settings-3-line icon-menu"></i>Settings</a></li>                
+              <li><a href="index.html"><i class="ri-arrow-left-line icon-menu"></i>Log out</a></li>
+            </ul>
+            
+        </div>
+    </nav>
+    
+    <div class="heading-wind">Wind Risk Level</div>
+    <section class="wind-level-container">
+        <table class="table-wind">
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>Wind Speed(kph)</th>
+                    <th>Description</th>
+                    <th>Recommend Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Level">Low Risk</td>
+                    <td data-label="Wind Speed(kph)">0-30 kph</td>
+                    <td data-label="Description">Normal na hangin, walang panganib.</td>
+                    <td data-label="Recommend Action">Walang kinakailangang aksyon.</td>
+                </tr>
+                <tr>
+                    <td data-label="Level">Moderate Risk</td>
+                    <td data-label="Wind Speed(kph)">31-60 kph</td>
+                    <td data-label="Description">Posibleng paglipad ng magaan na bagay, maliit na sanga, at debris.</td>
+                    <td data-label="Recommend Action">Mag-ingat sa labas, tiyakin ang maayos na pagkakatali ng gamit sa labas.</td>
+                </tr>
+                <tr>
+                    <td data-label="Level">Hign Risk</td>
+                    <td data-label="Wind Speed(kph)">61-90 kph</td>
+                    <td data-label="Description">Maaaring magpatumba ng mahihinang puno, magdulot ng pinsala sa bubong ng bahay.</td>
+                    <td data-label="Recommend Action">Siguraduhing ligtas ang mga gamit sa labas, iwasan ang paglabas kung hindi kinakailangan</td>
+                </tr>
+                <tr>
+                    <td data-label="Level">Very High Risk</td>
+                    <td data-label="Wind Speed(kph)">91-120 kph</td>
+                    <td data-label="Description">Malakas na hangin na maaaring bumuwal ng puno, poste, at sirain ang magaan na istruktura.</td>
+                    <td data-label="Recommend Action">Maghanda para sa posibleng emergency response, manatili sa matibay na gusali.</td>
+                </tr>
+                <tr>
+                    <td data-label="Level">Severe Risk</td>
+                    <td data-label="Wind Speed(kph)">121-180 kph</td>
+                    <td data-label="Description">Napakalakas na hangin na maaaring bumagsak ang mahihinang gusali, magdulot ng matinding pinsala sa agrikultura at linya ng kuryente.</td>
+                    <td data-label="Recommend Action">Maghanda para sa emergency evacuation. Iwasan ang paglabas.</td>
+                </tr>
+                <tr>
+                    <td data-label="Level">Extreme Risk</td>
+                    <td data-label="Wind Speed(kph)">181-220+ kph</td>
+                    <td data-label="Description">Mapanganib na super typhoon-level winds. Malawakang pagkasira sa imprastraktura, baha, at panganib sa buhay.</td>
+                    <td data-label="Recommend Action">Agarang lumikas kung kinakailangan. Sundin ang abiso ng barangay at LGU.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    </div>
+    
+    
+    <div class="heading-wind">Heat Risk Level</div>
+    <section class="wind-level-container">
+        <table class="table-wind">
+            <thead>
+                <tr>
+                    <th>Level</th>
+                    <th>Temperature°C (feels like)</th>
+                    <th>Description</th>
+                    <th>Recommend Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Level">Low Risk</td>
+                    <td data-label="Temperature (°C)">25-30°C</td>
+                    <td data-label="Description">Katamtamang init, normal na temperatura.</td>
+                    <td data-label="Recommend Action">Walang espesyal na aksyon. Uminom ng sapat na tubig.</td>
+                </tr>
+                <tr>
+                    <td data-label="Level">Medium Risk</td>
+                    <td data-label="Temperature (°C)">31-35°C</td>
+                    <td data-label="Description">Mainit na panahon, maaaring magdulot ng discomfort.</td>
+                    <td data-label="Recommend Action">Uminom ng maraming tubig. Iwasan ang matagalang exposure sa araw.</td>
+                </tr>
+                <tr>
+                    <td data-label="Level">Hign Risk</td>
+                    <td data-label="Temperature (°C)">36-40°C</td>
+                    <td data-label="Description">Matinding init, maaaring magdulot ng dehydration o heat exhaustion.</td>
+                    <td data-label="Recommend Action">Maghanap ng lilim o malamig na lugar. Iwasan ang labis na pisikal na aktibidad.</td>
+                </tr>
+                <tr>
+                    <td data-label="Level">Severe Risk</td>
+                    <td data-label="Temperature°C (feels like)">41°C+</td>
+                    <td data-label="Description">Napakatinding init, mataas ang panganib ng heatstroke.</td>
+                    <td data-label="Recommend Action">Manatili sa loob ng bahay kung maaari. Agarang humingi ng tulong kung may sintomas ng heatstroke.</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+    </div>
+    
+    <script>
+    let openlink = document.getElementById("navigation")
+        openlink.style.maxHeight = "50px";
+ </script>
+
+</body>
+</html>

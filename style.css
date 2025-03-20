@@ -190,6 +190,8 @@ button
 }
 .button-report {background-color:#1B2026;}
 
+.button-report:hover {background:(0, 0, 0, 0.25;}
+
 .button-dashboard {background-color:#2F7AED;}
 
 ul
@@ -390,7 +392,7 @@ ul li a:hover:before {width:85%;}
 #high-heat {color:orange;}
 #severe-heat {color:red;}
 #moderate-wind {color:#307CEC;}
-#button-medium-alert-cancel {cursor:pointer; background-color:#307CEC; color:#fff;}
+#button-medium-alert-cancel {background-color:#307CEC; color:#fff;}
 #heading-wind-bottom {margin-bottom:20px;}
 
 .text-feels-like, .feels-like-temp {font-size:12px;}
@@ -528,20 +530,13 @@ ul li a:hover:before {width:85%;}
   background-color:#fff;
   font-weight:400;
 }
-.button-medium-alert-cancel:hover
-{
-  background:(0, 0, 0, 0.25;
-  color:#fff;
-}
+
 .button-medium-alert-send
 {
   color:#fff;
   background-color:#307CEC;
 }
-.button-medium-alert-send:hover
-{
-  background-color: #0056b3;
-}
+
 .button-medium-alert
 {
   gap:10px;

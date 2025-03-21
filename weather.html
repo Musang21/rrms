@@ -266,7 +266,7 @@ async function updateWeatherInfo(city) {
   let SevereAlertHeat = document.getElementById("Severe-alert-heat");
   let ModerateAlertWind = document.getElementById("wind-moderate-risk");
   
-      if (feels_like >= 20 && feels_like <= 35) {
+      if (feels_like >= 31 && feels_like <= 35) {
        MediumAlertHeat.classList.add("show-alert-medium");
       }
       if (feels_like >= 36 && feels_like <= 40) {
@@ -281,45 +281,6 @@ async function updateWeatherInfo(city) {
       }
  
 }
-
-    
-    let audio = new Audio("audioalert.mp3");
-  audio.loop = true;
-
-  let isPlaying = false; // Flag para hindi paulit-ulit mag-play
-
-  function playAlertSound() {
-    if (!isPlaying) {
-        audio.play();
-        isPlaying = true;
-    }
-  }
-
-  function stopAlertSound() {
-    if (isPlaying) {
-        audio.pause();
-        audio.currentTime = 0;
-        isPlaying = false;
-    }
-  }
-
-  function checkFormPosition() {
-    let form = document.getElementById("medium-alert-heat");
-    let computedStyle = window.getComputedStyle(form);
-    let topValue = computedStyle.getPropertyValue("top");
-
-    console.log("Form top position:", topValue);
-
-    if (topValue === "20%") {
-        playAlertSound();
-    } else if (topValue === "-60%") {
-        stopAlertSound();
-    }
-  }
-
-  setInterval(checkFormPosition, 500);
-
-
     
     let MediumAlertHeat = document.getElementById("medium-alert-heat");
     let HighAlertHeat   = document.getElementById("high-alert-heat");

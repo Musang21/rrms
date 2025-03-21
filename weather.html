@@ -283,7 +283,7 @@ async function updateWeatherInfo(city) {
   let SevereAlertHeat = document.getElementById("Severe-alert-heat");
   let ModerateAlertWind = document.getElementById("wind-moderate-risk");
   
-      if (feels_like >= 20 && feels_like <= 35) {
+      if (feels_like >= 31 && feels_like <= 35) {
        MediumAlertHeat.classList.add("show-alert-medium");
         playAlertSound();
       }

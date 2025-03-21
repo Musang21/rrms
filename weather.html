@@ -265,7 +265,7 @@ async function updateWeatherInfo(city) {
   let SevereAlertHeat = document.getElementById("Severe-alert-heat");
   let ModerateAlertWind = document.getElementById("wind-moderate-risk");
   
-      if (feels_like >= 31 && feels_like <= 35) {
+      if (feels_like >= 25 && feels_like <= 35) {
        MediumAlertHeat.classList.add("show-alert-medium");
       }
       if (feels_like >= 36 && feels_like <= 40) {
@@ -311,7 +311,7 @@ async function updateWeatherInfo(city) {
 
     if (topValue === "20%") {
         playAlertSound();
-    } else if (topValue === "-20%") {
+    } else if (topValue === "-60%") {
         stopAlertSound();
     }
   }

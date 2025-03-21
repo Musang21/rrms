@@ -123,7 +123,7 @@
       <p class="alert-text">No internet connection!</p>
     </div>
     
-    <form>
+    <form id="megatron">
       <div class="alert-heat-container" id="medium-alert-heat">
        <h2 class="heading-heat-alert" id="medium-heat">Medium Heat Risk!</h2>
         <p class="text-feels-like">Feels like</p><h2 class="feels-like-temp2"></h2>
@@ -299,9 +299,9 @@ async function updateWeatherInfo(city) {
   }
 
   function checkFormPosition() {
-    let form = document.getElementById("medium-alert-heat");
+    let form = document.getElementById("megatron");
     let computedStyle = window.getComputedStyle(form);
-    let topValue = parseInt(computedStyle.getPropertyValue("top")); // Convert to number
+    let topValue = parseInt(computedStyle.getPropertyValue("20%")); // Convert to number
 
     if (topValue === "20%") {
         playAlertSound();

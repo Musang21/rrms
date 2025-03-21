@@ -301,7 +301,7 @@ async function updateWeatherInfo(city) {
   function checkFormPosition() {
     let form = document.getElementById("alertnotif");
     let computedStyle = window.getComputedStyle(form);
-    let topValue = parseInt(computedStyle.getPropertyValue("20")); // Convert to number
+    let topValue = parseInt(computedStyle.getPropertyValue("20%")); // Convert to number
 
     if (topValue === "20%") {
         playAlertSound();

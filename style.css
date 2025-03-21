@@ -513,7 +513,6 @@ ul li a:hover:before {width:85%;}
   box-shadow:5px 5px 10px #307CEC;
   z-index:999;
   transition:all 1s ease;
-  display:none;
 }
 .show-alert-medium {top:50%;}
 

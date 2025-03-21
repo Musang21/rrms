@@ -234,16 +234,6 @@ function getWeatherIcon(id) {
   return "weather.png";
 }
     
-function playAlertSound() {
-    let audio = new Audio("audioalert.mp3");
-    audio.loop = true;
-    audio.play();
-}
-    
-function stopAlertSound() {
-    alertAudio.pause();
-    alertAudio.currentTime = 0;
-}
 
 async function updateWeatherInfo(city) {
   let weatherData = await getFetchData(city);
@@ -257,7 +247,17 @@ async function updateWeatherInfo(city) {
     alertnotif2.classList.remove("open-alert");
   }
   
-  
+  function playAlertSound() {
+    let audio = new Audio("audioalert.mp3");
+    audio.loop = true;
+    audio.play();
+}
+    
+function stopAlertSound() {
+    alertAudio.pause();
+    alertAudio.currentTime = 0;
+}
+
 
   let {
     name: country,
